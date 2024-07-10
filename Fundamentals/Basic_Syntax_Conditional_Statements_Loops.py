@@ -32,14 +32,8 @@ word = input()
 print(word[::-1])
 
 # exercise 4
-#
-# Write a program that receives a number n on the first line.
-# On the following n lines, it receives different integer numbers.
-# If the program receives an odd number, print "{num} is odd!" and end the program.
-# Otherwise, if all numbers given are even, print "All numbers are even.".
 
 n = int(input())
-
 x = False
 for _ in range(n):
     num = int(input())
@@ -49,4 +43,31 @@ for _ in range(n):
 
 if not x:
     print("All numbers are even.")
+
+# exercise 5
+
+num = 0
+
+while num < 1 or num > 100:
+    num = float(input())
+
+print(f"The number {num} is between 1 and 100.")
+
+# exercise 6
+
+budget = float(input())
+spend = 0
+while True:
+    price = input()
+    if price == "End":
+        print("You bought everything needed.")
+        break
+
+    spend += float(price)
+
+    if spend > budget:
+        print("You went in overdraft!")
+        break
+
+# exercise 7
 
