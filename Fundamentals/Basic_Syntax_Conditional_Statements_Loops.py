@@ -3,17 +3,19 @@
 n = float(input())
 part1 = ''
 part2 = ''
+
 if n == 0:
     part2 = "zero"
-elif n > 0:
-    part2 = "positive"
-else:
-    part2 = "negative"
+elif n!= 0:
+    if 0 < abs(n) < 1:
+        part1 = 'small'
+    elif abs(n) > 1000000:
+        part1 = 'large'
 
-if abs(n) < 1:
-    part1 = 'small'
-elif abs(n) > 1000000:
-    part1 = 'large'
+    if n > 0:
+        part2 = "positive"
+    elif n < 0:
+        part2 = "negative"
 
 if len(part1) > 0:
     print(f"{part1} {part2}")
@@ -40,6 +42,7 @@ for _ in range(n):
     if num % 2 == 1:
         print(f"{num} is odd!")
         x = True
+        break
 
 if not x:
     print("All numbers are even.")
@@ -51,7 +54,7 @@ num = 0
 while num < 1 or num > 100:
     num = float(input())
 
-print(f"The number {num} is between 1 and 100.")
+print(f"The number {num} is between 1 and 100")
 
 # exercise 6
 
@@ -71,3 +74,10 @@ while True:
 
 # exercise 7
 
+n = int(input())
+
+for i in range(1, n+1):
+    print('*'*i)
+
+for ii in range(n-1, 0, -1):
+    print('*'*ii)
