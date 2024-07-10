@@ -26,4 +26,27 @@ n1, n2, n3 = int(input()), int(input()), int(input())
 
 print(max(n1, n2, n3))
 
+# exercise 3
+
+word = input()
+print(word[::-1])
+
+# exercise 4
 #
+# Write a program that receives a number n on the first line.
+# On the following n lines, it receives different integer numbers.
+# If the program receives an odd number, print "{num} is odd!" and end the program.
+# Otherwise, if all numbers given are even, print "All numbers are even.".
+
+n = int(input())
+
+x = False
+for _ in range(n):
+    num = int(input())
+    if num % 2 == 1:
+        print(f"{num} is odd!")
+        x = True
+
+if not x:
+    print("All numbers are even.")
+
